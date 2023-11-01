@@ -1,0 +1,290 @@
+.adjust-format {
+    display: inline-block;
+    min-width: 350px;
+    width: 100%;
+    height: 40px;
+}
+
+.adjust-format.middle-screen {
+    margin-top: 15%;
+}
+
+.adjust-format button {
+    float: right;
+}
+
+.video-list {
+    width: 100%;
+    display: inline-block;
+}
+
+.video_box {
+    display: inline-block;
+    width: 304px;
+    height: 270px;
+    border: solid 1px #333;
+    position: relative;
+    vertical-align: top;
+    padding: 1px;
+    margin: 5px;
+    box-shadow: 4px 8px 16px;
+    transition: 2s;
+}
+
+.page-total {
+    display: inline-block;
+}
+
+.page-number,
+.select-order {
+    display: inline-block;
+    width: 50px;
+    outline: none;
+    border: none;
+    text-align: center;
+    border-bottom: solid 1px #000;
+    animation-name: blink;
+    animation-duration: 1.04s;
+    animation-iteration-count: infinite;
+}
+
+.select-order {
+    width: 100px;
+}
+
+.page-number:hover {
+    cursor: pointer;
+    background-color: rgb(200 200 200 / 25%);
+    animation-name: unset;
+    animation-duration: unset;
+    animation-iteration-count: unset;
+}
+
+
+.times {
+    width: 100%;
+    height: 60px;
+    overflow-y: auto;
+}
+
+.timer_bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    background-color: rgb(255 50 50 / 25%)
+}
+
+.time_frame {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    height: 25px;
+    border-bottom: solid 1px rgb(150 150 250);
+    transition: 1s;
+}
+
+.time_frame:hover {
+    color: rgb(50 50 255);
+    cursor: pointer;
+    border-bottom: solid 1px rgb(100 100 255);
+    transition: 0.5s;
+
+}
+
+.marker {
+    background-color: rgb(250 175 175 / 50%);
+    height: 30px;
+
+}
+
+.video_frame {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    border: solid 1px rgb(0 0 0 / 10%);
+    box-shadow: 6px 6px 16px rgb(0 0 0 / 50%);
+}
+
+.large-searchbar {
+    height: 100%;
+    width: 40%;
+    margin: auto;
+    min-width: 300px;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 2px 2px 25px rgb(150 150 255 / 50%);
+}
+
+.large-searchbar input[type="submit"] {
+    float: right;
+    height: 40px;
+    width: 80px;
+    color: rgb(100 100 135);
+    border: solid 1px rgb(100 100 150 / 45%);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: inset -3px -3px 8px rgb(150 150 255 / 75%);
+    transition: 0.5s;
+}
+
+.large-searchbar form {
+    height: 100%;
+}
+
+.large-searchbar input[type="submit"]:hover {
+    cursor: pointer;
+    color: rgb(80 80 100);
+    box-shadow: inset 2px 2px 4px rgba(81 42 155 / 75%);
+    transition: 1s;
+}
+
+.large-searchbar input[type="text"] {
+    width: calc(100% - 80px);
+    vertical-align: bottom;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom: 1px solid rgb(255 255 255);
+    outline: none;
+    text-align: center;
+}
+
+.large-searchbar input[type="text"]:focus {
+    border-bottom: 1px solid rgb(0 0 0);
+}
+
+.large-searchbar input[type="text"]:hover {
+    animation-name: blink;
+    animation-duration: 1.04s;
+    animation-iteration-count: infinite;
+}
+
+.yvs {
+    text-decoration: none;
+    width: 200px;
+}
+
+.yvs::before {
+    content: "Youtube Word Searcher";
+}
+
+.add-channel form {
+    margin: auto;
+    width: 405px;
+}
+
+
+.add-channel input[type="text"] {
+    width: 350px;
+}
+
+.add-channel input[type="submit"] {
+    width: 50px;
+    margin-left: -6px;
+}
+
+
+@keyframes blink {
+    0% {
+        border-bottom: 1px solid rgb(0 0 0);
+    }
+
+    33% {
+        border-bottom: 1px solid rgb(255 255 255);
+    }
+
+    66% {
+        border-bottom: 1px solid rgb(255 255 255);
+    }
+
+    100% {
+        border-bottom: 1px solid rgb(0 0 0);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .adjust-format {
+        width: calc(100% - 100px);
+    }
+
+    .large-searchbar {
+        min-width: unset;
+        width: 60%;
+    }
+
+    .yvs {
+        width: 50px;
+    }
+
+    .yvs::before {
+        content: "YVS";
+    }
+
+}
+
+.blocked {
+    background-color: rgb(50 50 150 / 25%);
+}
+
+.blocked::before {
+    content: "wait";
+}
+
+.about-style {
+    width: 50%;
+    min-width: 400px;
+    text-align: justify;
+    margin: auto;
+}
+
+.about-style li {
+    list-style: none;
+}
+
+.about-style h2,
+.about-style h4 {
+    text-align: center;
+}
+
+.about-style h6 {
+    text-align: right;
+    font-style: italic;
+}
+
+.about-style h8 {
+    margin-left: 25px;
+}
+
+.stamp {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 16px rgb(0 0 0 / 80%);
+    bottom: 70px;
+    z-index: 2;
+    right: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .adjust-format {
+        width: calc(100% - 100px);
+    }
+
+    .large-searchbar {
+        min-width: unset;
+        width: 80%;
+    }
+
+    .yvs {
+        width: 50px;
+    }
+
+    .yvs::before {
+        content: "YVS";
+    }
+
+}
