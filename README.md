@@ -71,7 +71,7 @@ To use the YouTube Word Searcher:
 
 ## Limitations
 
-    - Anyway, it is good to know that actually Pickle will have trouble serializing data with more than 2gb (check the `./data/search_video.jls` file size).
+    - Pickle will have trouble serializing data with more than 2gb (check the `./data/search_video.jls` file size).
     - If you change the Trie, keep in mind some limitations like recursion limit and size. Abuse of pointers will made the system stop without a debug message.
 
 
