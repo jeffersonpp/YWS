@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    {% if page and videos and total %}
+        <h5>Page
+            <input type="number" min="1" value="1" class="page-number" id="page" onchange="paginate(this.value)"> of
+            <div class="page-total" id="total_pages"></div> - Videos: {{total_videos}}, Words: {{ total }} Ordered by:
+            <select class="select-order" onchange="changeOrder(this.value)">
+                <option value='word'>
+                    Word
+                </option>
+                <option value='date'>
+                    Date
+                </option>
+                <option value='views'>
+                    Views
+                </option>
+                <option value='channel'>
+                    Channel
+                </option>
+            </select>
+        </h5>
+        <div class="video-list">
+            {% for video, x in videos.items() %}
+                <div class="video_box" id="box_{{ video }}">
+                    <div class="video_frame" id="{{ video }}">
+                    </div>
+                    <div class="stamp">{{ videos[video] | count}}</div>
+                    <div class="video_times">
+                        <div class="times">
+                            {% for key in videos[video] %}
+                                {% for value in videos[video][key] %}
+                                    <div class="time_frame" data-videoid="{{ video }}" data-start="{{ value }}">
+                                        {{ key }} - {{ value | time_format }}
+                                    </div>
+                                {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="adjust-format middle-screen">
+            <div class="large-searchbar">
+                <form action="/" method="POST">
+                    <input type="hidden" page="1">
+                    <input type="text" name="query" placeholder="Write here the words you want to search">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

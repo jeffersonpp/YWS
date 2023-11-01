@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    <div class="adjust-format add-channel">
+        <form action="/add/channel" method="POST">
+            <input type="text" name="url" placeholder="www.youtube.com/@channel_name/videos">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+{% endblock %}
